@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
+        @Scripts.Render("~/bundles/knockout")
+         @Scripts.Render("~/bundles/knockoutmapping")
+        @Scripts.Render("~/bundles/knockoutvalidation")
+        @RenderSection("Scripts", false)
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div >
+                    <p class="site-title">@Html.ActionLink("Yleana Coding Exercise - Customer Info", "Index", "Home")</p>
+                </div>
+                <div class="float-right">
+                   
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                    <div class="float-left">
+                     <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

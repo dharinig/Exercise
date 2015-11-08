@@ -1,0 +1,70 @@
+﻿@model YleanaknockoutMVC.Models.Customer
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<form class="form-section" style="align-items:center">
+    <fieldset>
+
+        <div class="form-header">Create Customer</div>
+        <div class="form-fields">
+            <div class="input-label">
+                Customer Name
+            </div>
+            <div class="editor-field">
+                <input data-bind="value:CustomerName" />
+            </div>
+        </div>
+        <div class="form-fields">
+            <div class="editor-label">
+                Contact Name
+            </div>
+            <div class="editor-field">
+                <input data-bind="value: ContactName" />
+            </div>
+        </div>
+        <div class="form-fields">
+            <div class="editor-label">
+                Address
+            </div>
+            <div class="editor-field">
+                <input data-bind="value: Address" />
+            </div>
+          </div>
+        <div class="form-fields">
+            <div class="editor-label">
+                City
+            </div>
+            <div class="editor-field">
+                <input data-bind="value: City" />
+            </div>
+        </div>
+        <div class="form-fields">
+            <div class="editor-label">
+                Postal Code
+            </div>
+            <div class="editor-field">
+                <input data-bind="value: PostalCode" />
+            </div>
+          </div>
+        <div class="form-fields">
+            <div class="editor-label">
+                Country
+            </div>
+            <div class="editor-field">
+                <input data-bind="value: Country" />
+            </div>
+            </div>
+        <div class="form-fields">
+            <input type="submit" value="Create Customer" data-bind="click: CustomerInformationSystem.SaveCustomer" />
+           </div>
+</fieldset>
+</form>
+    <div>
+        <a href="@Url.Action("Index", "Customer")"> <strong>Back to Index</strong></a>
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/Scripts/ViewModel/CreateCustomerVM.js")
+    }

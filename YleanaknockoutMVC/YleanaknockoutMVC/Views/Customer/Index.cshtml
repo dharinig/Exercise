@@ -1,0 +1,15 @@
+﻿@model IEnumerable<YleanaknockoutMVC.Models.Customer>
+
+@{
+    ViewBag.Title = "CustomerInfo";
+}
+
+<p>
+    <a href="@Url.Action("ListCustomers", "Customer")"><input type="button" value="Fetch All Customers" /></a>
+ 
+</p>
+<p>
+    <a href="@Url.Action("Create", "Customer")"><input type="button" value="Create New Customer" /></a>
+  
+</p>
+

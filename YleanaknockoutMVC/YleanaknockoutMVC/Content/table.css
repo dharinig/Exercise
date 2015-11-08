@@ -1,0 +1,45 @@
+﻿/**********************************************************/
+/*Tables*/
+/**********************************************************/
+
+table
+{
+    margin: 0.5em;
+    border: solid thin #3B5998;
+    font-size: 1.0em;
+    display: inline-block;
+}
+thead, .header-row
+{
+    background-color: #3B5998;
+    color: #FFFFFF;
+    font-size: medium;
+    font-weight: bold;
+}
+th, .header-row td
+{
+    font-weight: bold;
+    padding: 0.15em;
+    text-align: center;
+    word-wrap: break-word;
+    -ms-word-wrap: break-word;
+}
+.th-cell
+{
+    font-weight: bold;
+    padding: 0.15em;
+    text-align: left;
+}
+td
+{
+    padding: 0.15em;
+    min-width: 3em;
+    border: thin solid #3B5998;
+    white-space: nowrap;
+}
+.table-image-button
+{
+    height: 1.25em;
+    width: 1.25em;
+    margin: 0.1em 0.25em 0.1em 0.25em;
+}

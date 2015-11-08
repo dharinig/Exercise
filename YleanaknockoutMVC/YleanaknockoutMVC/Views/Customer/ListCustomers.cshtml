@@ -1,0 +1,57 @@
+﻿@model IEnumerable<YleanaknockoutMVC.Models.Customer>
+
+@{
+    ViewBag.Title = "List of All Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of All Customers</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>
+            Customer Name
+        </th>
+        <th>
+           Contact Name
+        </th>
+        <th>
+           Address
+        </th>
+        <th>
+            City
+        </th>
+        <th>
+           Postal Code
+        </th>
+        <th>
+          Country
+        </th>
+    </tr>
+</thead>
+  
+    <tbody data-bind="foreach: Customers">
+        <tr>
+            <td data-bind="text: CustomerName"></td>
+            <td data-bind="text: ContactName"></td>
+            <td data-bind="text: Address"></td>
+            <td data-bind="text: City"></td>
+            <td data-bind="text: PostalCode"></td>
+            <td data-bind="text: Country"></td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <a href="@Url.Action("Index", "Customer")"> <strong>Back to Index</strong></a>
+</div>
+
+@section Scripts {
+
+@Scripts.Render("~/Scripts/ViewModel/CustomerListVM.js")
+
+}
+
+
+
